@@ -1,12 +1,15 @@
 {
-    "build": {
-        "dockerfile": "./Dockerfile"
-    },
-    "customizations": {
-        "vscode": {
-            "extensions": [
-                "scalameta.metals"
-            ]
-        }
+  "image": "mcr.microsoft.com/devcontainers/base:debian",
+  "customizations": {
+    "vscode": {
+      "extensions": ["scalameta.metals"]
     }
+  },
+  "features": {
+    "ghcr.io/ebaskoro/devcontainer-features/scala:1": {
+      "version": "2.13.10",
+      "installSbt": true,
+      "sbtVersion": "1.7.1"
+    }
+  }
 }
